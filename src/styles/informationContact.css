@@ -1,0 +1,101 @@
+
+/* ENTER FOR ALl TEXT */
+::view-transition-new(contact-title):only-child,
+::view-transition-new(contact-linkedin):only-child,
+::view-transition-new(contact-github):only-child,
+::view-transition-new(contact-info):only-child,
+::view-transition-new(contact-mail):only-child {
+    animation: .4s ease var(--animation-delay, 0s) both fade-in,.4s ease var(--animation-delay, 0s) both slide-to-up
+}
+
+::view-transition-new(contact-title):only-child {
+    --animation-delay: 75ms
+}
+
+::view-transition-new(contact-info):only-child {
+    --animation-delay: .12s
+}
+
+::view-transition-new(contact-linkedin):only-child {
+    --animation-delay: .17s
+}
+
+::view-transition-new(contact-github):only-child {
+    --animation-delay: .22s
+}
+
+::view-transition-new(contact-mail):only-child {
+    --animation-delay: .27s
+}
+
+/* EXIT FOR ALl TEXT */
+::view-transition-old(contact-title):only-child,
+::view-transition-old(contact-linkedin):only-child,
+::view-transition-old(contact-github):only-child,
+::view-transition-old(contact-info):only-child,
+::view-transition-old(contact-mail):only-child {
+    animation: .2s ease var(--animation-delay, 0s) both fade-out,.2s ease var(--animation-delay, 0s) both slide-to-down
+}
+
+::view-transition-old(contact-title):only-child {
+    --animation-delay: .15s
+}
+
+::view-transition-old(contact-info):only-child {
+    --animation-delay: .1s
+}
+
+::view-transition-old(contact-linkedin):only-child {
+    --animation-delay: .50ms
+}
+
+::view-transition-old(contact-github):only-child {
+    --animation-delay: 50ms
+}
+
+::view-transition-old(contact-mail):only-child {
+    --animation-delay: 50ms
+}
+
+
+
+
+@keyframes fade-in {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes slide-to-up {
+    0% {
+        transform: translateY(20rem)
+    }
+
+    to {
+        transform: translateY(0)
+    }
+}
+
+@keyframes slide-to-down {
+    0% {
+        transform: translateY(0)
+    }
+
+    to {
+        transform: translateY(20rem)
+    }
+}

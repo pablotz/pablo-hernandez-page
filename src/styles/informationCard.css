@@ -1,0 +1,152 @@
+/* ENTER FOR STACK COLUM */
+::view-transition-new(stack):only-child {
+    animation: .3s ease var(--animation-delay, 0s) both fade-in,.5s ease var(--animation-delay, 0s) both slide-from-left
+}
+::view-transition-new(stack):only-child {
+    --animation-delay: 20ms
+}
+
+/* EXIT FOR STACK COLUM */
+::view-transition-old(stack):only-child {
+    animation: .3s ease var(--animation-delay, 0s) both fade-out,.5s ease var(--animation-delay, 0s) both slide-from-right
+}
+
+::view-transition-old(stack):only-child {
+    --animation-delay: 20ms
+}
+
+
+
+/* ENTER FOR ABOUT COLUM */
+::view-transition-new(about-me):only-child {
+    animation: .4s ease var(--animation-delay, 0s) both fade-in,.5s ease var(--animation-delay, 0s) both slide-down
+}
+::view-transition-new(about-me):only-child {
+    --animation-delay: 20ms
+}
+
+/* EXIT FOR ABOUT COLUM */
+::view-transition-old(about-me):only-child {
+    animation: .4s ease var(--animation-delay, 0s) both fade-out,.5s ease var(--animation-delay, 0s) both slide-up
+}
+
+::view-transition-old(information):only-child {
+    --animation-delay: 20ms
+}
+
+
+
+/* ENTER FOR DESCRIPTION COLUM */
+::view-transition-new(paragraph1):only-child,::view-transition-new(paragraph2):only-child,::view-transition-new(paragraph3):only-child {
+    animation: .3s ease var(--animation-delay, 0s) both fade-in,.3s ease var(--animation-delay, 0s) both slide-to-up
+}
+
+::view-transition-new(paragraph1):only-child {
+    --animation-delay: 70ms
+}
+
+::view-transition-new(paragraph2):only-child {
+    --animation-delay: .17s
+}
+
+::view-transition-new(paragraph3):only-child {
+    --animation-delay: .24s
+}
+
+/* EXIT FOR DESCRIPTION COLUM */
+::view-transition-old(paragraph1):only-child,::view-transition-old(paragraph2):only-child,::view-transition-old(paragraph3):only-child {
+    animation: .2s ease var(--animation-delay, 0s) both fade-out,.2s ease var(--animation-delay, 0s) both slide-to-down
+}
+
+::view-transition-old(paragraph1):only-child {
+    --animation-delay: .15s
+}
+::view-transition-old(paragraph2):only-child {
+    --animation-delay: .1s
+}
+::view-transition-old(paragraph3):only-child {
+    --animation-delay: 50ms
+}
+
+
+
+
+@keyframes fade-in {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes slide-from-left {
+    0% {
+        transform: translateX(20rem)
+    }
+
+    to {
+        transform: translateX(0)
+    }
+}
+
+@keyframes slide-from-right {
+    0% {
+        transform: translateX(0)
+    }
+
+    to {
+        transform: translateX(20rem)
+    }
+}
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(-20rem)
+    }
+
+    to {
+        transform: translateY(0)
+    }
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(0)
+    }
+
+    to {
+        transform: translateY(-20rem)
+    }
+}
+
+@keyframes slide-to-up {
+    0% {
+        transform: translateY(20rem)
+    }
+
+    to {
+        transform: translateY(0)
+    }
+}
+
+@keyframes slide-to-down {
+    0% {
+        transform: translateY(0)
+    }
+
+    to {
+        transform: translateY(20rem)
+    }
+}

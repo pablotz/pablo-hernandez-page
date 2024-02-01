@@ -1,0 +1,20 @@
+{
+  "name": "pablo-hernandez-page",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^5.1.0",
+    "@fontsource/geist-mono": "^5.0.1",
+    "@fontsource/geist-sans": "^5.0.1",
+    "@fontsource/sarabun": "^5.0.18",
+    "astro": "^4.2.6",
+    "tailwindcss": "^3.4.1"
+  }
+}

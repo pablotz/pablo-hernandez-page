@@ -1,0 +1,49 @@
+---
+import { t, changeLanguage } from "i18next";
+
+changeLanguage("es");
+---
+<div class="lg:pt-56">
+  <div class="sm:pt-10">
+    <h1><a href="/">Acerca de mi.</a></h1>
+  </div>
+  <div class="sm:mt-8 lg:mt-14">
+    <h1>
+      <a href="/side-projects">Side Projects</a>
+    </h1>
+  </div>
+  <div class="sm:mt-8 lg:mt-14">
+    <h1>
+      <a href="/contact">Contacto.</a>
+    </h1>
+  </div>
+</div>
+
+<style>
+  h1 {
+    font-family: "Geist Mono";
+    font-size: 1.8em;
+    color: #e84856;
+    font-weight: 900;
+    text-decoration: underline;
+    width: 11em;
+  }
+
+  @media (min-width: 1180px) {
+    h1 {
+      font-size: 1.3em;
+    }
+  }
+  @media (min-width: 1280px) {
+    h1 {
+      font-size: 1.8em;
+    }
+  }
+
+  p {
+    font-family: "Geist Mono";
+    font-size: 2em;
+    color: #e84856;
+    font-weight: 900;
+  }
+</style>

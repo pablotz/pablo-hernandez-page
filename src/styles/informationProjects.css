@@ -1,0 +1,94 @@
+/* ENTER FOR Side Project title */
+::view-transition-new(side-projects-col):only-child {
+    animation: .3s ease var(--animation-delay, 0s) both fade-in,.5s ease var(--animation-delay, 0s) both slide-from-left
+}
+::view-transition-new(side-projects-col):only-child {
+    --animation-delay: 150ms
+}
+
+/* EXIT FOR Side Project title */
+::view-transition-old(side-projects-col):only-child {
+    animation: .3s ease var(--animation-delay, 0s) both fade-out,.5s ease var(--animation-delay, 0s) both slide-from-right
+}
+
+::view-transition-old(side-projects-col):only-child {
+    --animation-delay: 50ms
+}
+
+
+/* ENTER FOR Side Projects */
+::view-transition-new(projects):only-child {
+    animation: .3s ease var(--animation-delay, 0s) both fade-in,.5s ease var(--animation-delay, 0s) both slide-to-up
+}
+::view-transition-new(projects):only-child {
+    --animation-delay: 150ms
+}
+
+/* EXIT FOR Side Projects */
+::view-transition-old(projects):only-child {
+    animation: .3s ease var(--animation-delay, 0s) both fade-out,.5s ease var(--animation-delay, 0s) both slide-to-down
+}
+
+::view-transition-old(projects):only-child {
+    --animation-delay: 50ms
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes slide-from-left {
+    0% {
+        transform: translateX(20rem)
+    }
+
+    to {
+        transform: translateX(0)
+    }
+}
+
+@keyframes slide-from-right {
+    0% {
+        transform: translateX(0)
+    }
+
+    to {
+        transform: translateX(20rem)
+    }
+}
+
+@keyframes slide-to-up {
+    0% {
+        transform: translateY(20rem)
+    }
+
+    to {
+        transform: translateY(0)
+    }
+}
+
+@keyframes slide-to-down {
+    0% {
+        transform: translateY(0)
+    }
+
+    to {
+        transform: translateY(20rem)
+    }
+}

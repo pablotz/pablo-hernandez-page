@@ -1,0 +1,22 @@
+---
+import { changeLanguage } from "i18next";
+
+changeLanguage("es");
+
+const { title, description, image, url } = Astro.props;
+---
+
+<div class="lg:grid lg:grid-cols-2">
+    <div>
+        <a target="_blank" href={url} class="inline-flex items-baseline">
+            <h1 class="underline font-['Geist_Mono'] text-2xl font-black text-red">
+                {title}
+            </h1>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="30" height="30" viewBox="0 0 24 24" stroke-width="2" stroke="#E84856" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 15l6 -6" /><path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464" /><path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463" /></svg>
+        </a>
+    <p class="pt-5 lg:mr-20 sm:mr-10 sm:text-xl lg:text-2xl font-semibold">{description}</p>
+    </div>
+    <div class="" style="">
+        <img class="border-2 border-red images sm:w-64 sm:mt-10 sm:mb-20 lg:ml-10 lg:w-96 shadow-xl" src={image} alt="MDN"/>
+    </div>
+</div>
