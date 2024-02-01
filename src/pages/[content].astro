@@ -3,10 +3,18 @@ import Layout from "../layouts/Layout.astro";
 import InformationProjects from "../components/InformationProjects.astro";
 import InformationContact from "../components/InformationContact.astro";
 
+export function getStaticPaths() {
+  return [
+    {params: {content: '/'}},
+    {params: {content: 'contact'}},
+    {params: {content: 'side-projects'}},
+  ];
+}
+
 const { content } = Astro.params;
 const validRedirects = ["/", "contact", "side-projects"];
 const redirect = validRedirects.find(x => x === content);
-console.log("redirect");
+
 if (!redirect)
     return Astro.redirect("/");
 ---
