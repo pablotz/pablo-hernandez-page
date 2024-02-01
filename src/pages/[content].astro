@@ -1,10 +1,7 @@
 ---
-import { changeLanguage } from "i18next";
 import Layout from "../layouts/Layout.astro";
 import InformationProjects from "../components/InformationProjects.astro";
 import InformationContact from "../components/InformationContact.astro";
-
-changeLanguage("es");
 
 const { content } = Astro.params;
 const validRedirects = ["/", "contact", "side-projects"];
