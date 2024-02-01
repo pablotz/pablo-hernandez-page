@@ -82,8 +82,7 @@ const { title } = Astro.props;
 					const [, data] = text.match(/<body[^>]*>((.|[\n\r])*)<\/body>/im);
 
 					document.startViewTransition(() => {
-						document.body.innerHTML = data;
-						document.documentElement.scrollTop = 0;
+						document.getElementById('content').innerHTML = data;
 					})
 				}
 			})
