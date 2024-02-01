@@ -1,7 +1,7 @@
 {
   "name": "pablo-hernandez-page",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/vercel": "^7.0.2",
     "@fontsource/geist-mono": "^5.0.1",
     "@fontsource/geist-sans": "^5.0.1",
     "@fontsource/sarabun": "^5.0.18",
