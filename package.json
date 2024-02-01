@@ -9,6 +9,13 @@
     "preview": "astro preview",
     "astro": "astro"
   },
+
+  "overrides": {
+    "vite": {
+      "rollup": "npm:@rollup/wasm-node"
+    }
+  },
+  
   "dependencies": {
     "@astrojs/tailwind": "^5.1.0",
     "@fontsource/geist-mono": "^5.0.1",
